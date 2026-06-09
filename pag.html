@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="nuevo_estilo.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<title>VioPrevent Dashboard</title>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- MENU -->
+    <div class="sidebar">
+
+        <div class="logo">
+            Vio<span>Prevent</span>
+        </div>
+
+        <ul class="menu">
+            <li class="activo">Inicio</li>
+            <li>Alumnos</li>
+            <li>Reportes</li>
+            <li>Salones</li>
+            <li>Orientadores</li>
+            <li>Responsables</li>
+            <li>Ajustes</li>
+        </ul>
+
+    </div>
+
+    <!-- CONTENIDO -->
+    <div class="main">
+
+        <div class="header">
+
+            <input
+                type="text"
+                class="buscador"
+                placeholder="Buscar alumnos, reportes..."
+            >
+
+            <div class="usuario">
+                <h3>Juan Pérez (Director)</h3>
+                <button class="btn-salir">
+                    Cerrar sesión
+                </button>
+            </div>
+
+        </div>
+
+        <h1>Bienvenido al Panel de Control</h1>
+
+        <p>
+            Desde aquí podrás administrar la información clave de la institución.
+        </p>
+
+        <!-- TARJETAS -->
+
+        <div class="cards">
+
+            <div class="card">
+                <h3><i class="fa-solid fa-people-group"></i> Total de Alumnos</h3>
+                <h1>320</h1>
+            </div>
+
+            <div class="card">
+                <h3><i class="fa-solid fa-school"></i> Total de Salones</h3>
+                <h1>15</h1>
+            </div>
+
+            <div class="card">
+                <h3><i class="fa-solid fa-file-lines"></i> Reportes Totales</h3>
+                <h1>11</h1>
+            </div>
+
+            <div class="card">
+                <h3><i class="fa-solid fa-file-pen"></i> Reportes Pendientes</h3>
+                <h1>4</h1>
+            </div>
+
+        </div>
+
+        <!-- MAPA DE CALOR -->
+        <div class="map-container">
+            <h3 style="text-align:center; color:#032b2b;">Mapa de Calor de Incidencias</h3>
+            <div id="map"></div>
+        </div>
+
+        <!-- REPORTES Y ALERTAS -->
+
+        <div class="dashboard-content">
+
+            <div class="reportes">
+
+                <h2>Últimos Reportes Recibidos</h2>
+
+                <table>
+
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Tipo</th>
+                        <th>Lugar</th>
+                        <th>Estado</th>
+                    </tr>
+
+                    <tr>
+                        <td>02/06/2025</td>
+                        <td>Violencia Física</td>
+                        <td>Patio</td>
+                        <td>Pendiente</td>
+                    </tr>
+
+                    <tr>
+                        <td>01/06/2025</td>
+                        <td>Psicológica</td>
+                        <td>Salón 1A</td>
+                        <td>En proceso</td>
+                    </tr>
+
+                    <tr>
+                        <td>30/05/2025</td>
+                        <td>Verbal</td>
+                        <td>Cafetería</td>
+                        <td>Resuelto</td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+            <div>
+
+                <div class="alertas">
+
+                    <h2>Alertas</h2>
+
+                    <div class="alerta roja">
+                        <i class="fa-solid fa-bell"></i> 3 reportes de violencia física pendientes.
+                    </div>
+
+                    <div class="alerta amarilla">
+                        <i class="fa-solid fa-triangle-exclamation"></i> 2 casos requieren seguimiento.
+                    </div>
+
+                    <div class="alerta verde">
+                        <i class="fa-solid fa-circle-check"></i> 6 casos resueltos este mes.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        
+        </div>
+
+    </div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
+<script src="nuevo_script.js"></script>
+
+</body>
+</html>
